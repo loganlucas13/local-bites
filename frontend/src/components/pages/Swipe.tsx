@@ -1,44 +1,35 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-import { Button } from '../ui/button';
+import React, { useState, useEffect } from 'react';
 import ActivitySwipe from '../ui/ActivitySwipe';
 
-// TODO: get data from API and dynamically display activityswipe components
-
 type location = {
-    name: string;
-    description: string;
-    picture: string;
+    displayName: string;
+    editorialSummary: string;
+    photos: string;
     rating: string;
-    cost: string;
-    location: string;
-    phone: string;
+    priceLevel: string;
+    formattedAddress: string;
+    nationalPhoneNumber: string;
 };
 
 const Swipe = () => {
-    const [locations, setLocations] = useState([
-        {
-            name: 'Monteverde',
-            description:
-                'Stylish spot serving refined, contemporary Italian fare.',
-            picture:
-                'https://lh5.googleusercontent.com/p/AF1QipMVOrUckJnQu7C2jkBwjaSd7PPbQaFlqyQgWhSH=w408-h255-k-no',
-            rating: '4.7',
-            cost: '$$$',
-            location: '1020 W Madison St.',
-            phone: '123-456-7890',
-        },
-        {
-            name: 'Alinea',
-            description: 'Innovative fine dining with an artistic flair.',
-            picture: 'https://example.com/alinea.jpg',
-            rating: '4.9',
-            cost: '$$$$',
-            location: '1723 N Halsted St.',
-            phone: '123-456-7890',
-        },
-    ]);
+    const fetchResponse = async (query: string): Promise<location[]> => {
+        const response = await fetch(
+            `http://localhost:8000/api/search/?=${query}`
+        );
+        const data = await response.json();
+        return data as location[];
+    };
+
+    const [locations, setLocations] = useState<location[]>([]);
+
+    useEffect(() => {
+        const loadLocations = async () => {
+            const fetchedLocations = await fetchResponse('italian lunch');
+            setLocations(fetchedLocations);
+        };
+
+        loadLocations();
+    }, []);
 
     const [chosenLocations, setChosenLocations] = useState<location[]>([]);
 
@@ -65,11 +56,11 @@ const Swipe = () => {
                         key={index}
                         className="border-2 border-blue-100 px-8 py-4 rounded-2xl bg-white shadow-lg w-2/5"
                     >
-                        <span className="text-xl">{loc.name}</span>
+                        <span className="text-xl">{loc.displayName}</span>
                         <div className="flex flex-col gap-2 text-lg pl-4">
-                            <span>{loc.location}</span>
-                            <span>{loc.cost}</span>
-                            <span>{loc.phone}</span>
+                            <span>{loc.formattedAddress}</span>
+                            <span>{loc.priceLevel}</span>
+                            <span>{loc.nationalPhoneNumber}</span>
                         </div>
                     </div>
                 ))}
@@ -83,14 +74,13 @@ const Swipe = () => {
                 Picking Restaurants
             </span>
             <ActivitySwipe
-                name={currentLocation.name}
-                description={currentLocation.description}
-                picture={currentLocation.picture}
+                displayName={currentLocation.displayName}
+                editorialSummary={currentLocation.editorialSummary}
+                photos={currentLocation.photos}
                 rating={currentLocation.rating}
-                cost={currentLocation.cost}
-                cuisine={currentLocation.cuisine}
-                location={currentLocation.location}
-                phone={currentLocation.phone}
+                priceLevel={currentLocation.priceLevel}
+                formattedAddress={currentLocation.formattedAddress}
+                nationalPhoneNumber={currentLocation.nationalPhoneNumber}
                 onThumbsUp={() => {
                     handleThumbsUp(currentLocation);
                     showNextPreview();

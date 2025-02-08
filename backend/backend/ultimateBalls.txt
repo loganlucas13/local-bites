@@ -1,0 +1,43 @@
+[
+    {
+        "nationalPhoneNumber": "(312) 667-0104",
+        "formattedAddress": "564 W Randolph St, Chicago, IL 60661, USA",
+        "location": {
+            "latitude": 41.884577,
+            "longitude": -87.64252139999999
+        },
+        "rating": 4.8,
+        "priceLevel": "PRICE_LEVEL_MODERATE",
+        "userRatingCount": 3058,
+        "displayName": "Alla Vita",
+        "editorialSummary": "Traditional Italian specialties plated in a stylish, elegant restaurant with a whimsical vibe.",
+        "photos": "https://lh3.googleusercontent.com/places/ANXAkqHGXn7XbcTlxt64WNY94dORVrOyzk_oqZLWCGjxxEzXi7R_noEMNTzQiATJjw8MhUCU8Jc_0kwJjlcf684uueCSwaeCGmeckYo=s4800-w3024-h4032"
+    },
+    {
+        "nationalPhoneNumber": "(312) 733-3393",
+        "formattedAddress": "1073 W Vernon Park Pl, Chicago, IL 60607, USA",
+        "location": {
+            "latitude": 41.872896399999995,
+            "longitude": -87.6540409
+        },
+        "rating": 4.6,
+        "priceLevel": "PRICE_LEVEL_MODERATE",
+        "userRatingCount": 1284,
+        "displayName": "Tufano's Vernon Park Tap",
+        "editorialSummary": "Circa-1930 spot serving homestyle Italian fare in an old-school setting with checkered tablecloths.",
+        "photos": "https://lh3.googleusercontent.com/places/ANXAkqGHzyC1RIzewibXlBOVb0NnK1yY8LSdbeEUJBTyXr-kHeSnIaxLwLzDBJF3KnFs03fxajjaJ9l62hPmdm7WgiEI9lX2hhNauHw=s4800-w4032-h3024"
+    },
+    {
+        "nationalPhoneNumber": "(312) 265-0697",
+        "formattedAddress": "947 W Fulton St, Chicago, IL 60607, USA",
+        "location": {
+            "latitude": 41.8866382,
+            "longitude": -87.6517417
+        },
+        "rating": 4.9,
+        "priceLevel": "PRICE_LEVEL_MODERATE",
+        "userRatingCount": 187,
+        "displayName": "Italian Homemade Company",
+        "photos": "https://lh3.googleusercontent.com/places/ANXAkqHq0q_GZpA6JArNfV5_Ga4wiCFIGyfMF5fRK1PlG-IYQrnxe3o3tUDBN9UOBijruRgqm5DLtWLzTqwwEBuZi3LzQp4anf4alS0=s4800-w4032-h3024"
+    }
+]

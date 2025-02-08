@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Button } from './button';
 
 import { ThumbsDown, ThumbsUp, Star, Gem, MapIcon, Phone } from 'lucide-react';
 
 type ActivitySwipeProps = {
-    name: string;
-    description: string;
-    picture: string;
+    displayName: string;
+    editorialSummary: string;
+    photos: string;
     rating: string;
-    cost: string;
-    location: string;
-    phone: string;
+    priceLevel: string;
+    formattedAddress: string;
+    nationalPhoneNumber: string;
     onThumbsUp: () => void;
     onThumbsDown: () => void;
 };
@@ -22,10 +22,10 @@ const ActivitySwipe = (props: ActivitySwipeProps) => {
             <div className="flex flex-col items-center gap-2">
                 <img
                     className="rounded-3xl border-4 border-blue-100"
-                    src={props.picture}
+                    src={props.photos}
                 ></img>
                 <span className="text-2xl border-2 border-blue-100 rounded-3xl px-4 py-1">
-                    {props.name}
+                    {props.displayName}
                 </span>
             </div>
 
@@ -53,21 +53,21 @@ const ActivitySwipe = (props: ActivitySwipeProps) => {
             </div>
             <div className="flex flex-col w-4/5 border-2 border-blue-100 rounded-3xl px-8 py-4">
                 <span className="text-xl underline">Description</span>
-                <span className="pl-4">{props.description}</span>
+                <span className="pl-4">{props.editorialSummary}</span>
             </div>
 
             <div className="flex flex-col gap-2 w-full justify-center items-center">
                 <span className="flex flex-row items-center gap-1">
                     <Gem />
-                    {props.cost}
+                    {props.priceLevel}
                 </span>
                 <span className="flex flex-row items-center gap-1">
                     <MapIcon />
-                    {props.location}
+                    {props.formattedAddress}
                 </span>
                 <span className="flex flex-row items-center gap-1">
                     <Phone />
-                    {props.phone}
+                    {props.nationalPhoneNumber}
                 </span>
             </div>
         </div>
