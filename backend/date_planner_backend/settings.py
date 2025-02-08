@@ -75,8 +75,13 @@ WSGI_APPLICATION = 'date_planner_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',    # MySQL engine
+        'NAME': 'NEED FIX',                # The name of your DB
+        'USER': 'root',                          # DB username
+        'PASSWORD': 'NEED FIX',                    # DB password
+        'HOST': 'localhost',                     # or IP/domain if remote
+        'PORT': '3306',                          # default MySQL port
+
     }
 }
 
