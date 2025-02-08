@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Varela Round';
+    src: url('./assets/fonts/VarelaRound-Regular.ttf');
+}
+
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Varela Round', Inter;
     line-height: 1.5;
     font-weight: 400;
 
@@ -19,11 +24,7 @@
 
 a {
     font-weight: 500;
-    color: #646cff;
     text-decoration: inherit;
-}
-a:hover {
-    color: #535bf2;
 }
 
 body {
@@ -51,7 +52,7 @@ button {
     transition: border-color 0.25s;
 }
 button:hover {
-    border-color: #646cff;
+    border-color: #dbeafe;
 }
 button:focus,
 button:focus-visible {
@@ -72,14 +73,14 @@ button:focus-visible {
 }
 
 @layer base {
-  :root {
+    :root {
         --background: 0 0% 100%;
         --foreground: 0 0% 3.9%;
         --card: 0 0% 100%;
         --card-foreground: 0 0% 3.9%;
         --popover: 0 0% 100%;
         --popover-foreground: 0 0% 3.9%;
-        --primary: 0 0% 9%;
+        --primary: white;
         --primary-foreground: 0 0% 98%;
         --secondary: 0 0% 96.1%;
         --secondary-foreground: 0 0% 9%;
@@ -99,7 +100,7 @@ button:focus-visible {
         --chart-5: 27 87% 67%;
         --radius: 0.5rem;
     }
-  .dark {
+    .dark {
         --background: 0 0% 3.9%;
         --foreground: 0 0% 98%;
         --card: 0 0% 3.9%;
@@ -128,10 +129,13 @@ button:focus-visible {
 }
 
 @layer base {
-  * {
-    @apply border-border;
+    * {
+        @apply border-border;
     }
-  body {
-    @apply bg-background text-foreground;
+    body {
+        @apply bg-background text-foreground;
+        background-color: #ececec;
+        background-image: radial-gradient(#dbeafe 1.8px, white 1.8px);
+        background-size: 36px 36px;
     }
 }
