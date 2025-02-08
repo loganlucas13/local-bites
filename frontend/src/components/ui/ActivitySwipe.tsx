@@ -10,9 +10,10 @@ type ActivitySwipeProps = {
     picture: string;
     rating: string;
     cost: string;
-    cuisine: string;
     location: string;
     phone: string;
+    onThumbsUp: () => void;
+    onThumbsDown: () => void;
 };
 
 const ActivitySwipe = (props: ActivitySwipeProps) => {
@@ -29,10 +30,18 @@ const ActivitySwipe = (props: ActivitySwipeProps) => {
             </div>
 
             <div className="flex flex-row justify-between w-3/5 text-3xl">
-                <Button variant="thumbdown" size="icon">
+                <Button
+                    variant="thumbdown"
+                    size="icon"
+                    onClick={props.onThumbsDown}
+                >
                     <ThumbsDown />
                 </Button>
-                <Button variant="thumbup" size="icon">
+                <Button
+                    variant="thumbup"
+                    size="icon"
+                    onClick={props.onThumbsUp}
+                >
                     <ThumbsUp />
                 </Button>
             </div>
