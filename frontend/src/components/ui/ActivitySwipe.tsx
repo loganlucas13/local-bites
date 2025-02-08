@@ -21,7 +21,7 @@ const ActivitySwipe = (props: ActivitySwipeProps) => {
         <div className="flex flex-col justify-center items-center gap-4 bg-white border-blue-100 border-2 rounded-2xl p-4 shadow-lg w-2/5 mb-6">
             <div className="flex flex-col items-center gap-2">
                 <img
-                    className="rounded-3xl border-4 border-blue-100"
+                    className="rounded-3xl border-4 border-blue-100 max-w-96 max-h-96"
                     src={props.photos}
                 ></img>
                 <span className="text-2xl border-2 border-blue-100 rounded-3xl px-4 py-1">
