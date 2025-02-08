@@ -3,20 +3,24 @@ import { Link } from 'react-router-dom';
 
 import { Button } from '../ui/button';
 import { NotebookPen } from 'lucide-react';
+import { Pizza } from 'lucide-react';
 
 function Startup() {
     return (
         <div className="flex flex-col min-h-screen w-screen justify-center items-center gap-10">
             <div className="bg-white border-blue-100 border-2 rounded-2xl p-4 shadow-lg">
-                <span className="text-4xl">Date Planner</span>
+                <span className="flex flex-row gap-2 items-center text-4xl">
+                    <Pizza />
+                    LocalBites
+                </span>
             </div>
 
             <div className="flex flex-col justify-center items-center gap-6 bg-white border-blue-100 border-2 rounded-2xl p-4 shadow-lg">
                 <span className="text-2xl">
-                    Support local businesses by using our date planner!
+                    Find curated options for dining at small businesses nearby!
                 </span>
                 <Link to="/plan">
-                    <Button variant="outline">
+                    <Button variant="next" size="lg">
                         <NotebookPen />
                         <span>Start your planning!</span>
                     </Button>

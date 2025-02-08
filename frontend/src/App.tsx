@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Startup from './components/pages/Startup';
 import Plan from './components/pages/Plan';
 import Preferences from './components/pages/Preferences';
+import Swipe from './components/pages/Swipe';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     path="plan/preferences"
                     element={<Preferences />}
                 ></Route>
+                <Route path="plan/swipe" element={<Swipe />}></Route>
             </Routes>
         </BrowserRouter>
     );
