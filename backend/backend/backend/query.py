@@ -71,7 +71,7 @@ def place_filter(response, api_key, search_engine_id, threshold):
     i =0
     for place in response['places']:
         i+=1
-        if i > 3:
+        if i > 20:
             break
         query = place['displayName']['text']
 
@@ -80,6 +80,8 @@ def place_filter(response, api_key, search_engine_id, threshold):
 
         # Make the request
         search_response = requests.get(url).json()
+        if 'searchInformation' not in search_response:
+            break
         if len(search_response['searchInformation']['totalResults']) <= threshold:
             result.append(place)
 

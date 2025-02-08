@@ -45,6 +45,16 @@ const Swipe = () => {
 
     const currentLocation = locations[currentLocationIndex];
 
+    if (locations.length == 0) {
+        return (
+            <div className="flex flex-col min-h-screen w-screen justify-center items-center gap-10 mt-6">
+                <div className="border-2 border-blue-100 shadow-lg rounded-2xl bg-white text-3xl px-4 py-2">
+                    <span>Loading...</span>
+                </div>
+            </div>
+        );
+    }
+
     if (currentLocationIndex >= locations.length) {
         return (
             <div className="flex flex-col min-h-screen w-screen justify-center items-center gap-10 mt-6">

@@ -59,7 +59,15 @@ const ActivitySwipe = (props: ActivitySwipeProps) => {
             <div className="flex flex-col gap-2 w-full justify-center items-center">
                 <span className="flex flex-row items-center gap-1">
                     <Gem />
-                    {props.priceLevel}
+                    {props.priceLevel === 'PRICE_LEVEL_INEXPENSIVE' ? (
+                        <span>$</span>
+                    ) : props.priceLevel === 'PRICE_LEVEL_MODERATE' ? (
+                        <span>$$</span>
+                    ) : props.priceLevel === 'PRICE_LEVEL_EXPENSIVE' ? (
+                        <span>$$$</span>
+                    ) : props.priceLevel === 'PRICE_LEVEL_VERY_EXPENSIVE' ? (
+                        <span>$$$</span>
+                    ) : null}
                 </span>
                 <span className="flex flex-row items-center gap-1">
                     <MapIcon />
