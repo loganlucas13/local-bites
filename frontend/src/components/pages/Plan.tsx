@@ -53,7 +53,9 @@ const Plan = () => {
                                 htmlFor="park"
                                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                             >
-                                <span className="text-xl">Park</span>
+                                <span className="text-xl hover:cursor-pointer">
+                                    Park
+                                </span>
                             </label>
                         </div>
                         <div className="flex items-center space-x-2">
@@ -71,7 +73,9 @@ const Plan = () => {
                                 htmlFor="museum"
                                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                             >
-                                <span className="text-xl">Museum</span>
+                                <span className="text-xl hover:cursor-pointer">
+                                    Museum
+                                </span>
                             </label>
                         </div>
                         <div className="flex items-center space-x-2">
@@ -89,7 +93,9 @@ const Plan = () => {
                                 htmlFor="karaoke"
                                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                             >
-                                <span className="text-xl">Karaoke</span>
+                                <span className="text-xl hover:cursor-pointer">
+                                    Karaoke
+                                </span>
                             </label>
                         </div>
                         <div className="flex items-center space-x-2">
@@ -109,7 +115,9 @@ const Plan = () => {
                                 htmlFor="thrifting"
                                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                             >
-                                <span className="text-xl">Thrifting</span>
+                                <span className="text-xl hover:cursor-pointer">
+                                    Thrifting
+                                </span>
                             </label>
                         </div>
                     </div>
@@ -133,7 +141,9 @@ const Plan = () => {
                                 htmlFor="breakfast"
                                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                             >
-                                <span className="text-xl">Breakfast</span>
+                                <span className="text-xl hover:cursor-pointer">
+                                    Breakfast
+                                </span>
                             </label>
                         </div>
                         <div className="flex items-center space-x-2">
@@ -151,7 +161,9 @@ const Plan = () => {
                                 htmlFor="lunch"
                                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                             >
-                                <span className="text-xl">Lunch</span>
+                                <span className="text-xl hover:cursor-pointer">
+                                    Lunch
+                                </span>
                             </label>
                         </div>
                         <div className="flex items-center space-x-2">
@@ -169,7 +181,9 @@ const Plan = () => {
                                 htmlFor="dinner"
                                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                             >
-                                <span className="text-xl">Dinner</span>
+                                <span className="text-xl hover:cursor-pointer">
+                                    Dinner
+                                </span>
                             </label>
                         </div>
                         <div className="flex items-center space-x-2">
@@ -187,7 +201,9 @@ const Plan = () => {
                                 htmlFor="dessert"
                                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                             >
-                                <span className="text-xl">Dessert</span>
+                                <span className="text-xl hover:cursor-pointer">
+                                    Dessert
+                                </span>
                             </label>
                         </div>
                     </div>
