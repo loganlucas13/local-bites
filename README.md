@@ -1,8 +1,12 @@
-# React + Vite
+# 🍴 Local Bites
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> [!NOTE]
+> This project is currently not maintained, however it may be worked on in the future.
 
-Currently, two official plugins are available:
+## 📓 About this project
+- Created during the 24 hour-long SparkHacks hackathon @ UIC
+- Built using React, Python, and Django
+- Uses the Google Maps and Google Search APIs to gather data from the surrounding area, so it works anywhere!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 💻 Preview
+<img width="769" height="583" alt="local-bites-R-I8zPv_" src="https://github.com/user-attachments/assets/cca1fcaf-c0f0-48ca-8dc8-44cd097abbe1" />
